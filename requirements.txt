@@ -1,7 +1,9 @@
 numpy
 pandas
 scikit-learn
-torch
-torchvision
+scipy
+tensorflow
 nibabel
+SimpleITK
+opencv-python
 matplotlib
