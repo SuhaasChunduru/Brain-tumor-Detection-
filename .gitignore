@@ -1,14 +1,55 @@
-.DS_Store
-__pycache__/
-*.py[cod]
-*.pyo
-*.pyd
-*.keras
-*.npy
+# ---- Data (never commit BraTS volumes or derived caches) ----
+# Leading slash: only the dataset dir at the repo root, not the src/data package.
+/data/
+*.nii
+*.nii.gz
 *.npz
+*.npy
+*.mha
+*.mhd
+
+# ---- Model weights / checkpoints ----
+results/models/
+*.keras
 *.h5
 *.hdf5
+*.ckpt
+*.pb
 *.pkl
 *.pt
 *.pth
 *.onnx
+*.tflite
+
+# ---- Credentials / local config ----
+.env
+.env.*
+*.env
+!.env.example
+*.pem
+*.key
+credentials.json
+secrets.json
+.claude/
+.vscode/
+.idea/
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# ---- Stray plot output written to the repo root ----
+/dice_iou.png
+/hd95_assd.png
+
+# ---- OS ----
+.DS_Store
+Thumbs.db

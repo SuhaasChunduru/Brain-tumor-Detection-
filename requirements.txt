@@ -1,8 +1,13 @@
-numpy
+# src/train.py uses tf.keras.optimizers.legacy.Adam, which Keras 3 removed.
+# TensorFlow 2.16+ ships Keras 3 by default, so the upper bound is required.
+tensorflow>=2.13,<2.16
+
+# TensorFlow <2.16 is built against the NumPy 1.x ABI.
+numpy<2.0
+
 pandas
 scikit-learn
 scipy
-tensorflow
 nibabel
 SimpleITK
 opencv-python
